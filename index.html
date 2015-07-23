@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="description" content="Tic Tac Toe 2.0">
+    <meta name="author" content="RoelvanderHeijden">
+
+    <title>Tic Tac Toe 2.0</title>
+    
+    
+		<link rel="stylesheet" href="./assets/css/game.css">
+		<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	
+	  <div class="container text-center">
+	  	<div class="content">
+	  		
+				<h1>Tic Tac Toe <span class="badge">2.0</span></h1>
+				<hr>
+				
+				<div id="players">
+					<div class="pull-left btn btn-danger disabled">Player 1 <span class="badge">X</span></div>
+					<div class="pull-right btn btn-primary disabled"><span class="badge">O</span> Player 2</div>
+				</div>
+		
+				<div class="clearfix"></p></p></div>
+				<div id="game">
+					<div id="field_00" class="field newrow"></div>
+					<div id="field_01" class="field"></div>
+					<div id="field_02" class="field"></div>
+					<div id="field_03" class="field"></div>
+					<div id="field_04" class="field"></div>
+					
+					<div id="field_10" class="field newrow"></div>
+					<div id="field_11" class="field"></div>
+					<div id="field_12" class="field"></div>
+					<div id="field_13" class="field"></div>
+					<div id="field_14" class="field"></div>
+					
+					<div id="field_20" class="field newrow"></div>
+					<div id="field_21" class="field"></div>
+					<div id="field_22" class="field"></div>
+					<div id="field_23" class="field"></div>
+					<div id="field_24" class="field"></div>
+					
+					<div id="field_30" class="field newrow"></div>
+					<div id="field_31" class="field"></div>
+					<div id="field_32" class="field"></div>
+					<div id="field_33" class="field"></div>
+					<div id="field_34" class="field"></div>
+					
+					<div id="field_40" class="field newrow"></div>
+					<div id="field_41" class="field"></div>
+					<div id="field_42" class="field"></div>
+					<div id="field_43" class="field"></div>
+					<div id="field_44" class="field"></div>
+				</div>
+				
+				<div id="gameinfo" class="alert"></div>
+				<button id="newgame" class="btn btn-default btn-lg">Start Game</button>
+		
+			</div>
+		</div>
+	
+	  <!-- jQuery -->
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="./assets/js/jquery-1.11.3.min.js"><\/script>')</script>
+		
+		<!-- Bootstrap -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script>$.fn.modal || document.write('<script src="./assets/js/bootstrap.min.js">\x3C/script>')</script>
+	
+		<!-- Custom JavaScript -->
+		<script src="./assets/js/game.js"></script>
+		<script>
+			$( document ).ready(function() {
+				// set newGame function to start button
+				$('#newgame').css({'cursor':'pointer'}).on('click', newGame);
+				//newGame(); // auto start newGame
+			});
+		</script>
+  </body>
+</html>

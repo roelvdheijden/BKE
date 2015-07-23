@@ -1,0 +1,50 @@
+html, body, .container{
+    height: 100%;
+}
+.content{
+	display: inline-block;
+}
+h1 {
+	margin-bottom: 5px;	
+	font-size : 30px;
+	font-weight: bold;
+}
+h1 span.badge {
+	font-size : 20px;
+}
+#players .badge {
+	margin: 0 10px;
+}
+#game {
+	clear : both;
+	display: inline-block;
+	margin-top : 15px;
+}
+#game .field {
+	width: 50px;
+	height: 50px;
+	display: block;
+	float: left;
+	border: 1px solid Black;
+	margin: 2px;
+	padding-top:5px;
+	font-size : 35px;
+	font-weight: bold;
+	text-align: center;
+}
+#game .inactive {
+	border: 1px solid Grey;
+	background-color: Silver;
+}
+#game .newrow {
+	clear : both;
+}
+
+#gameinfo {
+	font-size : 18px;
+	font-weight: bold;
+}
+#newgame {
+	font-weight: bold;
+	color: Grey
+}
