@@ -10,16 +10,23 @@ class Game
 	/* constructor */
 	function __construct()
 	{
-		if (isset($_SESSION['GameData']) && !$_SESSION['GameData'] instanceof GameData)
-    	$_SESSION['GameData'] = new GameData();
-		
-		$this->gameData = &$_SESSION['GameData'];
+		// get gameData object from session
+		if (isset($_SESSION['GameData']) && $_SESSION['GameData'] instanceof GameData)
+    	$this->gameData = &$_SESSION['GameData'];
 	}
 	
 	/* public routing method calls */
 	function newGame(array $params=null)
 	{
+		// end session
 		unset($_SESSION['GameData']);
+		session_unset();
+		session_destroy();
+		// start new session
+		session_start();
+		session_regenerate_id(true); 
+		
+		
 		$_SESSION['GameData'] = new GameData();
 		$this->gameData = &$_SESSION['GameData'];
 		
@@ -27,6 +34,7 @@ class Game
 		$this->gameData->playMove(2,2,$this->gameData->getCurrentPlayer()); // fixed first move
 		$this->gameData->view('json');
 	}
+	
 	function play(array $params=null)
 	{
 		// validate input parameter and naming

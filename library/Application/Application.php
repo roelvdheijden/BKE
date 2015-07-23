@@ -13,6 +13,7 @@ class Application
 	function __construct()
 	{
 		session_start();
+		session_regenerate_id(true); 
 		
 		$this->router = new Router();
 		// initialize routes
